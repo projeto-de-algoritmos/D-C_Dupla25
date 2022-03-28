@@ -7,30 +7,39 @@ from typing import List
 
 class Solution:
     def findPeakGrid(self, mat: List[List[int]]) -> List[int]:
+        # armazeno a primeira e a ultima coluna da matriz
         primeiraColuna = 0
         ultimaColuna = len(mat[0])-1
 
         while primeiraColuna <= ultimaColuna:
+            # comeco a busca pela coluna do meio
             auxColuna = int((primeiraColuna + ultimaColuna)/2)
             maiorColuna = 0
 
+            # armezena o maior valor da coluna
             for x in range(len(mat)):
                 if mat[x][auxColuna] >= mat[maiorColuna][auxColuna]:
                     maiorColuna = x
 
+            # declara o valor da direita e esquerda como menor
             esquerdaMaior = False
             direitaMaior = False
 
+            # se nao é a primeira coluna e o valor da esquerda é maior, esquerdaMaior vira true
             if auxColuna-1 >= primeiraColuna and mat[maiorColuna][auxColuna-1] > mat[maiorColuna][auxColuna]:
                 esquerdaMaior = True
+            # se nao é a ultima coluna e o valor da direita é maior, direitaMaior vira true
             if auxColuna+1 <= ultimaColuna and mat[maiorColuna][auxColuna+1] > mat[maiorColuna][auxColuna]:
                 direitaMaior = True
 
+            # se o valor da esquerda e direita nao é maior, ja achamos o peak element
             if not direitaMaior and not esquerdaMaior:
                 return [maiorColuna,auxColuna]
+            # se o valor da direita é maior, atualiza a ultima coluna
             elif direitaMaior:
                 ultimaColuna = auxColuna-1
             else:
+            # se o valor da esquerda é maior, atualiza a primeira coluna
                 primeiraColuna = auxColuna+1
             
         return []
