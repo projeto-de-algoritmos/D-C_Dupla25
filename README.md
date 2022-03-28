@@ -13,7 +13,7 @@
 
 Faça o download do vídeo na pasta <b>apresentacao</b>.
 
-Ou clique no link para assistir à apresentação no youtube: <i>ainda não disponível</i>
+Ou clique no link para assistir à apresentação no youtube: https://youtu.be/oh_kfn8Veq4
 
 ## Sobre 
 

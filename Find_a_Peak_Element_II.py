@@ -35,11 +35,11 @@ class Solution:
             # se o valor da esquerda e direita nao é maior, ja achamos o peak element
             if not direitaMaior and not esquerdaMaior:
                 return [maiorColuna,auxColuna]
-            # se o valor da direita é maior, atualiza a ultima coluna
-            elif direitaMaior:
+            # se o valor da esquerda é maior, atualiza a ultima coluna
+            elif esquerdaMaior:
                 ultimaColuna = auxColuna-1
             else:
-            # se o valor da esquerda é maior, atualiza a primeira coluna
+            # se o valor da direita é maior, atualiza a primeira coluna
                 primeiraColuna = auxColuna+1
             
         return []
