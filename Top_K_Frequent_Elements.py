@@ -1,5 +1,5 @@
-# Find a Peak Element II, do LeetCode
-# link: https://leetcode.com/problems/find-a-peak-element-ii/
+# Top K Frequent Elements, do LeetCode
+# link: https://leetcode.com/problems/top-k-frequent-elements/
 
 from ast import operator
 from operator import itemgetter
